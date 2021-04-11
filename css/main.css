@@ -1,0 +1,236 @@
+/* 
+* Палитра 
+*/
+
+:root {
+   --accent-color: #2196f3;
+   --body-hero-color: #fff;
+   --title-color: #212121;
+   --footer-contacts-color: rgba(255,255,255,0.6);
+   --main-text-color: #757575;
+   --header-studio-color: #000;
+   --bcg-team-color: #f5f4fa;
+   --bcg-hero-footer-color: #2f303a;
+}
+
+/* 
+* Общие стили для хедера (лого, навигация, контакты)
+*/
+
+body {
+   font-family: 'Roboto', sans-serif;
+   letter-spacing: .03em;
+   color: var(--main-text-color);
+
+   background-color: var(--body-hero-color);
+}
+
+.header-links {
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: .02em;
+}
+
+.logo-accent {
+   font-family: 'Raleway', sans-serif;
+   font-size: 26px;
+   font-weight: 700;
+   line-height: 1.2;
+}
+
+.logo-header {
+   font-family: 'Raleway', sans-serif;
+   font-size: 26px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: var(--header-studio-color);
+}
+
+.logo-accent,
+.logo-header:hover,
+.logo-header:focus,
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link.current,
+.contacts-header .link:hover,
+.contacts-header .link:focus {
+   color: var(--accent-color);
+}
+
+.site-nav .link { color: var(--title-color); }
+
+.contacts-header .link { color: var(--main-text-color); }
+
+/* 
+* Общие стили для основного контента (стиль текста, списков, кнопок и ссылок)
+*/
+
+.list { list-style: none; }
+
+.link { text-decoration: none; }
+
+.section-title-main {
+   font-size: 36px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: var(--title-color);
+   text-align: center;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.hero-button,
+.portfolio-button {
+   font-family: inherit;
+   cursor: pointer;
+}
+
+/* 
+* Основной контент страницы "Студия" (герой, преимущества, примеры работ и презентация команды)
+*/
+
+/* Герой - главный баннер (слоган и кнопка "Заказать услугу") */ 
+.hero-title {
+   font-size: 44px;
+   font-weight: 900;
+   line-height: 1.4;
+   letter-spacing: .06em;
+   color: var(--body-hero-color);
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.hero-button {
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 2;
+   letter-spacing: .06em;
+   color: var(--body-hero-color);
+   text-align: center;
+
+   background-color: var(--accent-color);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+   color: var(--accent-color);
+
+   background-color: var(--body-hero-color);
+}
+
+.hero,
+.footer-links {
+   background-color: var(--bcg-hero-footer-color);
+}
+
+/* Преимущества работы со студией*/
+.section-title-benefits {
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 1.14;
+   color: var(--title-color);
+   text-transform: uppercase;
+}
+
+.section-text-benefits {
+   font-size: 14px;
+   line-height: 1.7;   
+}
+
+/* Команда - секция с именами, должностями и фото */
+.team { background-color: var(--bcg-team-color); }
+
+.section-title-team {
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.2;
+   color: var(--title-color);
+}
+
+.section-text-team {
+   font-size: 16px;
+   line-height: 1.2;
+}
+
+/* 
+* Общие стили для футера (лого, ссылки с адресом и контактами)
+*/
+
+.footer-links { font-family: 'Roboto', sans-serif; }
+
+.logo-footer {
+   font-family: 'Raleway', sans-serif;
+   font-size: 26px;
+   font-weight: 700;
+   line-height: 1.2;
+}
+
+.map-link,
+.logo-footer {
+   color: var(--body-hero-color);
+}
+
+.contacts-footer .link { color: var(--footer-contacts-color); }
+
+.map-link,
+.contacts-footer {
+   font-size: 14px;
+   font-style: normal;
+   line-height: 1.7;
+}
+
+.logo-footer:hover,
+.logo-footer:focus,
+.map-link:hover,
+.map-link:focus,
+.contacts-footer .link:hover,
+.contacts-footer .link:focus {
+   color: var(--accent-color);
+}
+
+/* 
+* Основной контент страницы "Портфолио" (фильтр из кнопок и примеры проектов)
+*/
+
+.portfolio-button {
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.6;
+   color: var(--title-color);
+   text-align: center;
+
+   background-color: var(--bcg-team-color);
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+   color: var(--body-hero-color);
+
+   background-color: var(--accent-color);
+}
+
+.section-title-project {
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 2;
+   letter-spacing: .06em;
+   color: var(--title-color);
+}
+
+.section-text-project {
+   font-size: 16px;
+   line-height: 2;
+}
