@@ -14,8 +14,26 @@
 }
 
 /* 
-* Общие стили для хедера (лого, навигация, контакты)
+* Общие стили для хедера (лого, навигация, контакты) и шрифты
 */
+
+html { box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
 
 body {
    font-family: 'Roboto', sans-serif;
@@ -23,6 +41,16 @@ body {
    color: var(--main-text-color);
 
    background-color: var(--body-hero-color);
+}
+
+/* доделать отступы */
+.section { padding: 94px ;}
+
+.container {
+   width: 1230px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
 }
 
 .header-links {
@@ -66,11 +94,19 @@ body {
 * Общие стили для основного контента (стиль текста, списков, кнопок и ссылок)
 */
 
-.list { list-style: none; }
+.list { 
+   list-style: none; 
+   padding-left: 0;
+	margin: 0;
+}
 
-.link { text-decoration: none; }
+.link { 
+   text-decoration: none; 
+}
 
 .section-title-main {
+   margin-bottom: 50px;
+
    font-size: 36px;
    font-weight: 700;
    line-height: 1.2;
@@ -98,22 +134,35 @@ body {
    cursor: pointer;
 }
 
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
 /* 
 * Основной контент страницы "Студия" (герой, преимущества, примеры работ и презентация команды)
 */
 
 /* Герой - главный баннер (слоган и кнопка "Заказать услугу") */ 
+.hero { text-align: center; }
+
 .hero-title {
+   margin-bottom: 30px;
+
    font-size: 44px;
    font-weight: 900;
    line-height: 1.4;
    letter-spacing: .06em;
    color: var(--body-hero-color);
    text-transform: uppercase;
-   text-align: center;
 }
 
 .hero-button {
+   border-radius: 4px;
+   padding: 10px 32px;
+   min-width: 200px;
+
    font-size: 16px;
    font-weight: 700;
    line-height: 2;
@@ -122,6 +171,8 @@ body {
    text-align: center;
 
    background-color: var(--accent-color);
+   border: 1px solid transparent;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -145,6 +196,11 @@ body {
    text-transform: uppercase;
 }
 
+.section-title-benefits,
+.section-title-team {
+   margin-bottom: 10px;
+}
+
 .section-text-benefits {
    font-size: 14px;
    line-height: 1.7;   
@@ -153,16 +209,23 @@ body {
 /* Команда - секция с именами, должностями и фото */
 .team { background-color: var(--bcg-team-color); }
 
+.team-card { margin-bottom: 30px; }
+
 .section-title-team {
    font-size: 16px;
    font-weight: 500;
    line-height: 1.2;
    color: var(--title-color);
+   text-align: center;
 }
 
 .section-text-team {
+   padding-bottom: 30px;
+   margin-bottom: 0;
+
    font-size: 16px;
    line-height: 1.2;
+   text-align: center;
 }
 
 /* 
@@ -205,7 +268,14 @@ body {
 * Основной контент страницы "Портфолио" (фильтр из кнопок и примеры проектов)
 */
 
+.filter { text-align: center; }
+
 .portfolio-button {
+   display: inline-block;
+   border-radius: 4px;
+   padding: 6px 22px;
+   min-width: 73px;
+
    font-size: 16px;
    font-weight: 500;
    line-height: 1.6;
@@ -213,6 +283,7 @@ body {
    text-align: center;
 
    background-color: var(--bcg-team-color);
+   border: 1px solid transparent;
 }
 
 .portfolio-button:hover,
@@ -222,7 +293,14 @@ body {
    background-color: var(--accent-color);
 }
 
+.project-item { padding-bottom: 20px; }
+
+/* не работает */
+.project-card { margin-bottom: 30px; }
+
 .section-title-project {
+   margin-bottom: 4px;
+
    font-size: 18px;
    font-weight: 700;
    line-height: 2;
@@ -231,6 +309,8 @@ body {
 }
 
 .section-text-project {
+   padding-bottom: 20px;
+
    font-size: 16px;
    line-height: 2;
 }
