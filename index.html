@@ -22,8 +22,8 @@
   <body>
     <!-- Шапка сайта -->
     <header class="header-links">
-      <div class="container">
-        <nav>
+      <div class="container main-nav">
+        <nav class="main-nav">
           <!-- Лого сайта -->
           <a href="./index.html" lang="en" class="logo-accent link"
             >Web<span class="logo-header link">Studio</span></a
@@ -31,19 +31,23 @@
 
           <!-- Навигация на другие страницы -->
           <ul class="site-nav list">
-            <li><a href="./index.html" class="link current">Студия</a></li>
-            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li><a href="" class="link">Контакты</a></li>
+            <li class="item">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
 
         <ul class="contacts-header list">
-          <li>
+          <li class="item">
             <a href="mailto:info@devstudio.com" class="link"
               >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="item">
             <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
           </li>
         </ul>
@@ -64,29 +68,29 @@
         <div class="container">
           <!-- Скрытый смысловой заголовок -->
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="list">
-            <li>
+          <ul class="list benefits">
+            <li class="item">
               <h3 class="section-title-benefits">Внимание к деталям</h3>
               <p class="section-text-benefits">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li>
+            <li class="item">
               <h3 class="section-title-benefits">Пунктуальность</h3>
               <p class="section-text-benefits">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li>
+            <li class="item">
               <h3 class="section-title-benefits">Планирование</h3>
               <p class="section-text-benefits">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li>
+            <li class="item">
               <h3 class="section-title-benefits">Современные технологии</h3>
               <p class="section-text-benefits">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -98,11 +102,11 @@
       </section>
 
       <!-- Примеры работ -->
-      <section class="section">
+      <section class="section examples">
         <div class="container">
           <h2 class="section-title-main">Чем мы занимаемся</h2>
           <ul class="list">
-            <li>
+            <li class="examples-element">
               <img
                 src="./images/design1.jpg"
                 alt="Программирование приложений"
@@ -110,7 +114,7 @@
                 height="294"
               />
             </li>
-            <li>
+            <li class="examples-element">
               <img
                 src="./images/design2.jpg"
                 alt="Создание дизайна приложений"
@@ -118,7 +122,7 @@
                 height="294"
               />
             </li>
-            <li>
+            <li class="examples-element">
               <img
                 src="./images/design3.jpg"
                 alt="Подбор подходящей цветовой гаммы"
@@ -135,9 +139,8 @@
         <div class="container">
           <h2 class="section-title-main">Наша команда</h2>
           <ul class="list">
-            <li>
+            <li class="team-card">
               <img
-                class="team-card"
                 src="./images/product-designer.jpg"
                 alt="Фото Игоря Демьяненко"
                 width="270"
@@ -146,9 +149,8 @@
               <h3 class="section-title-team">Игорь Демьяненко</h3>
               <p class="section-text-team" lang="en">Product Designer</p>
             </li>
-            <li>
+            <li class="team-card">
               <img
-                class="team-card"
                 src="./images/frontend-developer.jpg"
                 alt="Фото Ольги Репиной"
                 width="270"
@@ -157,9 +159,8 @@
               <h3 class="section-title-team">Ольга Репина</h3>
               <p class="section-text-team" lang="en">Frontend Developer</p>
             </li>
-            <li>
+            <li class="team-card">
               <img
-                class="team-card"
                 src="./images/marketing.jpg"
                 alt="Фото Николая Тарасова"
                 width="270"
@@ -168,9 +169,8 @@
               <h3 class="section-title-team">Николай Тарасов</h3>
               <p class="section-text-team" lang="en">Marketing</p>
             </li>
-            <li>
+            <li class="team-card">
               <img
-                class="team-card"
                 src="./images/ui-designer.jpg"
                 alt="Фото Михаила Ермакова"
                 width="270"
