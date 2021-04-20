@@ -3,6 +3,8 @@
 */
 
 :root {
+   --main-font: 'Roboto', sans-serif;
+   --logo-font: 'Raleway', sans-serif;
    --accent-color: #2196f3;
    --body-hero-color: #fff;
    --title-color: #212121;
@@ -41,7 +43,7 @@ p {
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
+   font-family: var(--main-font);
    letter-spacing: .03em;
    color: var(--main-text-color);
 
@@ -81,14 +83,14 @@ body {
 }
 
 .logo-accent {
-   font-family: 'Raleway', sans-serif;
+   font-family: var(--logo-font);
    font-size: 26px;
    font-weight: 700;
    line-height: 1.2;
 }
 
 .logo-header {
-   font-family: 'Raleway', sans-serif;
+   font-family: var(--logo-font);
    font-size: 26px;
    font-weight: 700;
    line-height: 1.2;
@@ -186,10 +188,14 @@ img {
 */
 
 /* Герой - главный баннер (слоган и кнопка "Заказать услугу") */ 
-.hero { text-align: center; }
+.hero { 
+   padding-top: 200px;
+   padding-bottom: 200px;
+
+   text-align: center; 
+}
 
 .hero-title {
-   padding-top: 200px;
    margin-bottom: 30px;
 
    font-size: 44px;
@@ -199,6 +205,8 @@ img {
    color: var(--body-hero-color);
    text-transform: uppercase;
 }
+
+.hero-indent { display: block; }
 
 .hero-button {
    border-radius: 4px;
@@ -215,10 +223,6 @@ img {
    background-color: var(--accent-color);
    border: 1px solid transparent;
    box-shadow: var(--hero-btn-shadow);
-}
-
-.hero-btn-container {
-   padding-bottom: 200px;
 }
 
 .hero-button:hover,
@@ -283,7 +287,6 @@ img {
 .section-team-description {
    padding-bottom: 30px;
    margin-top: 30px;
-   margin-bottom: 0;
 }
 
 .section-title-team {
@@ -295,6 +298,8 @@ img {
 }
 
 .section-text-team {
+   margin-bottom: 0;
+
    font-size: 16px;
    line-height: 1.2;
    text-align: center;
@@ -304,15 +309,19 @@ img {
 * Общие стили для футера (лого, ссылки с адресом и контактами)
 */
 
-.footer-links { font-family: 'Roboto', sans-serif; }
+.footer-links { 
+   padding-top: 60px;
+   padding-bottom: 60px;
+
+   font-family: var(--main-font); 
+}
 
 .full-logo-footer { 
-   padding-top: 60px;
    margin-bottom: 20px;
 }
 
 .logo-footer {
-   font-family: 'Raleway', sans-serif;
+   font-family: var(--logo-font);
    font-size: 26px;
    font-weight: 700;
    line-height: 1.2;
@@ -324,8 +333,6 @@ img {
 }
 
 .contacts-footer { margin-top: 9px; }
-
-.contacts-footer:last-child { padding-bottom: 60px; }
 
 .contacts-footer .link { color: var(--footer-contacts-color); }
 
@@ -399,10 +406,9 @@ img {
 .flex-element:nth-last-child(-n + 3) { margin-bottom: 0; }
 
 .section-project-description {
-   padding-top: 20px;
-   padding-bottom: 20px;
-   padding-left: 24px;
+   padding: 20px 24px;
    margin-bottom: 0;
+
    border: 1px solid var(--project-border);
    border-top: 0;
 }
