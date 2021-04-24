@@ -363,7 +363,7 @@ img {
    text-align: center; 
 }
 
-.filter-item:not(:last-child) {margin-right: 9px; }
+.filter-item:not(:last-child) {margin-right: 8px; }
 
 .portfolio-button {
    display: inline-block;
